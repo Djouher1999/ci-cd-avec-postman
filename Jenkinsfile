@@ -34,7 +34,7 @@ pipeline{
                         script{
                             if(params.ALLURE){
                                 sh '''
-                                    newman run collection.json --r allure --reporter-allure-export allure-results
+                                    newman run collection.json -r allure --reporter-allure-export allure-results
                                 '''
                             } else {
                                 sh '''
