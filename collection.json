@@ -1,0 +1,56 @@
+{
+  "info": {
+    "_postman_id": "84ce1c33-7c89-43e8-a6a5-e5311c31e05b",
+    "name": "k6collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31776356",
+    "_collection_link": "https://go.postman.co/collection/31776356-84ce1c33-7c89-43e8-a6a5-e5311c31e05b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "get all brands",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "pm.test(\"Response time is less than 250ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(250);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.practicesoftwaretesting.com/brands",
+          "protocol": "https",
+          "host": [
+            "api",
+            "practicesoftwaretesting",
+            "com"
+          ],
+          "path": [
+            "brands"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
