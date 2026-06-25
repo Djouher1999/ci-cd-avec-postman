@@ -15,11 +15,10 @@ pipeline{
                 stage('install deps'){
                     steps{
                         sh '''
-                        npm install
-                        npm install -g newman-reporter-allure
+                            npm install
+                            npm install -g newman-reporter-allure
                         '''
                     }
-                }
                 }
 
                 stage('clean allure results'){
